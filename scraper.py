@@ -103,16 +103,18 @@ for block in blocks:
         title = block.text.strip().split('-')[-1].strip()
         csvMth = ''
         if '%20to%20' in link:
-            if 'quarter one' in title:
+            if 'uarter one' in title:
                 csvMth = 'Q1'
             if 'two' in title:
                 csvMth = 'Q2'
-            if 'quarter three' in title:
+            if 'uarter three' in title:
                 csvMth = 'Q3'
             if 'March' in title:
                 csvMth = 'Q1'
             if 'June' in title:
                 csvMth = 'Q2'
+            if 'uarter 4' in title:
+                csvMth = 'Q4'
             match=re.search(r'(%20\d{4}%20)', link)
             csvYr = match.group(1).replace('%20', '')
             if 'cess' in csvYr:
